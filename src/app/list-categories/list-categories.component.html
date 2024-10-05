@@ -1,0 +1,25 @@
+<input type="text" [(ngModel)]="titre" placeholder="Rechercher par titre">
+
+<div class="container">
+    <div class="row">
+
+      <div *ngFor="let x of categories | contains:titre" class="col-md-4" style="margin-bottom: 20px;">
+        
+          <img appHilight title="dd" (click)="showDescription(x.description)" src="{{x.image}}" [alt]="x.title" class="img-fluid h-50 w-75" />
+          <h3 appHilight>{{ x.title | uppercase }}</h3>
+          <button class="btn btn-primary" *ngIf="x.available">Voir produits</button>
+          <p *ngIf="!x.available">Catégorie non disponible</p>
+      
+      </div>
+      
+   
+   
+      
+    </div>
+  </div>
+  <!--{{nom}}
+  <button (click)="clickMe()">test</button>
+  <input value="nom">
+  <input [value]="nom">
+  <br>
+  <input [(ngModel)]="nom">-->
