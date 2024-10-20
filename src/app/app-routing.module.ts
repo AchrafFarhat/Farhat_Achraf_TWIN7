@@ -13,19 +13,45 @@ import { DetailsCategoryComponent } from './details-category/details-category.co
 //ce fichier a ete generé
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, children:
+  { 
+    path: 'home', component: HomeComponent, children:
     [
       { path: 'getdetails/:id', component: DetailsCategoryComponent },
-    ] },
-  
+    ] 
+  },
 
-  { path: '', redirectTo:'home', pathMatch:'full' },
   { path: 'test', component: TestComponent},
+
   //pathParam
   { path: 'details/:id', component: ProductsCategoryComponent },
+
   //QueryParam
   { path: 'details', component: ProductsQCategoryComponent },
+
+  { 
+    path: 'products', 
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule) 
+  },
+
+  { 
+    path: 'apropos', 
+    loadChildren: () => import('./apropos/apropos.module').then(m => m.AproposModule) 
+  },
+
+  { 
+    path: 'contact', 
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) 
+  },
+
+  { 
+    path: 'profile', 
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) 
+  },
+
+  { path: '', redirectTo:'home', pathMatch:'full' },
+
   { path: '**', component: NotFoundComponent}, // dernière chose
+  
 ];
 
 @NgModule({
