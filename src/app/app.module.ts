@@ -10,6 +10,11 @@ import { ListCategoriesComponent } from './list-categories/list-categories.compo
 import { FormsModule } from '@angular/forms';
 import { ContainsPipe } from './contains.pipe';
 import { HilightDirective } from './hilight.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { TestComponent } from './test/test.component';
+import { ProductsCategoryComponent } from './products-category/products-category.component';
+import { ProductsQCategoryComponent } from './products-qcategory/products-qcategory.component';
+import { DetailsCategoryComponent } from './details-category/details-category.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,18 @@ import { HilightDirective } from './hilight.directive';
     ListCategoriesComponent,
     ContainsPipe,
     HilightDirective,
+    NotFoundComponent,
+    TestComponent,
+    ProductsCategoryComponent,
+    ProductsQCategoryComponent,
+    DetailsCategoryComponent,
   ],
-  imports: [
+  imports: [ //la liste des modules dont on a besoin
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [], //services
   bootstrap: [AppComponent]
 })
 export class AppModule { }

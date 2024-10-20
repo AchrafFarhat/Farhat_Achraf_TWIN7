@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let Product of list">
+        <img title="Product.image" [src]="Product.image" [alt]="Product.name" class="img-fluid h-50 w-75">
+        <h3>{{ Product.name }}</h3>
+        <h3>{{ Product.price }} €</h3>
+      </div>
+    </div>
+  </div>
+  
+
