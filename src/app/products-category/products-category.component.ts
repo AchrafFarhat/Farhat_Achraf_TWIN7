@@ -21,7 +21,7 @@ export class ProductsCategoryComponent {
   
 
   constructor(private ac: ActivatedRoute) {}
-  id!: number;
+  id: number;
 
   list: Product[] = [];
 

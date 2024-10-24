@@ -9,6 +9,8 @@
         "label": "off"
       }
     ],
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "button-type": "off",
+    "typescript-config/strict": "off"
   }
 }

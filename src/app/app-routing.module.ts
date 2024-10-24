@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { ProductsCategoryComponent } from './products-category/products-category.component';
 import { ProductsQCategoryComponent } from './products-qcategory/products-qcategory.component';
 import { DetailsCategoryComponent } from './details-category/details-category.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 // Define your routes here. Each route is an object with a path and a component to display.
@@ -21,6 +22,8 @@ const routes: Routes = [
   },
 
   { path: 'test', component: TestComponent},
+
+  { path: 'add', component: AddProductComponent},
 
   //pathParam
   { path: 'details/:id', component: ProductsCategoryComponent },

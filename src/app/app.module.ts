@@ -15,6 +15,7 @@ import { TestComponent } from './test/test.component';
 import { ProductsCategoryComponent } from './products-category/products-category.component';
 import { ProductsQCategoryComponent } from './products-qcategory/products-qcategory.component';
 import { DetailsCategoryComponent } from './details-category/details-category.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DetailsCategoryComponent } from './details-category/details-category.co
     ProductsCategoryComponent,
     ProductsQCategoryComponent,
     DetailsCategoryComponent,
+    AddProductComponent,
   ],
   imports: [ //la liste des modules dont on a besoin
     BrowserModule,
