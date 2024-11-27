@@ -1,0 +1,12 @@
+<!-- list-products.component.html -->
+<div *ngFor="let product of listProducts">
+    <app-card
+      [id]="product.id"
+      [image]="product.image"
+      [title]="product.title"
+      [description]="product.description"
+      [available]="product.quantity > 0"
+      (addToShortlist)="handleAddToShortlist($event)"
+    ></app-card>
+  </div>
+  

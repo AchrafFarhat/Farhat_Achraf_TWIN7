@@ -3,16 +3,20 @@
 <div class="container">
     <div class="row">
 
-      <div *ngFor="let x of categories | contains:titre" class="col-md-4" style="margin-bottom: 20px;">
-        
-          <img appHilight title="dd" (click)="showDescription(x.description)" src="{{x.image}}" [alt]="x.title" class="img-fluid h-50 w-75" />
-          <h3 appHilight>{{ x.title | uppercase }}</h3>
-          <a [routerLink]="['getdetails',x.id]" >details</a>
-          <button [routerLink]="['/details',x.id]" class="btn btn-primary" *ngIf="x.available">Voir produits</button>
-          <button [routerLink]="['/details']" [queryParams]="{id:x.id}" class="btn btn-primary" *ngIf="x.available">Voir produits2</button>
-          <p *ngIf="!x.available">Catégorie non disponible</p>
-      
-      </div>
+  
+      <!-- list-categories.component.html -->
+<div *ngFor="let category of categories | contains:'title'" class="col-md-4" style="margin-bottom: 20px;">
+  <app-card (notified)="f($event)"
+    [id]="category.id"
+    [image]="category.image"
+    [title]="category.title"
+    [description]="category.description"
+    [available]="category.available"
+    btnText="Voir produits"
+    (addToShortlist)="handleAddToShortlist(category.id)"
+  ></app-card>
+</div>
+
 
       
       

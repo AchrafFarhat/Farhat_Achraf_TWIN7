@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListCategoriesComponent } from './list-categories/list-categories.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainsPipe } from './contains.pipe';
 import { HilightDirective } from './hilight.directive';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -16,6 +16,9 @@ import { ProductsCategoryComponent } from './products-category/products-category
 import { ProductsQCategoryComponent } from './products-qcategory/products-qcategory.component';
 import { DetailsCategoryComponent } from './details-category/details-category.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { AddProductReactiveComponent } from './add-product-reactive/add-product-reactive.component';
+import { CardComponent } from './card/card.component';
+import { ListProductsComponent } from './list-products/list-products.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,15 @@ import { AddProductComponent } from './add-product/add-product.component';
     ProductsQCategoryComponent,
     DetailsCategoryComponent,
     AddProductComponent,
+    AddProductReactiveComponent,
+    CardComponent,
+    ListProductsComponent,
   ],
   imports: [ //la liste des modules dont on a besoin
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, //template driven form
+    ReactiveFormsModule //reactive form
   ],
   providers: [], //services
   bootstrap: [AppComponent]

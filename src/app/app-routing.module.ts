@@ -8,6 +8,7 @@ import { ProductsCategoryComponent } from './products-category/products-category
 import { ProductsQCategoryComponent } from './products-qcategory/products-qcategory.component';
 import { DetailsCategoryComponent } from './details-category/details-category.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { AddProductReactiveComponent } from './add-product-reactive/add-product-reactive.component';
 
 
 // Define your routes here. Each route is an object with a path and a component to display.
@@ -20,6 +21,8 @@ const routes: Routes = [
       { path: 'getdetails/:id', component: DetailsCategoryComponent },
     ] 
   },
+
+  { path: 'AddP', component: AddProductReactiveComponent},
 
   { path: 'test', component: TestComponent},
 

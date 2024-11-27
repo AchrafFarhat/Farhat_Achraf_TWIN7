@@ -1,0 +1,55 @@
+<form [formGroup]="myForm" (ngSubmit)="onSave()">
+    <!-- Name Field -->
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" /> <br />
+      <div *ngIf="name.errors?.['required'] && name.touched">Name obligatoire</div>
+      <div *ngIf="name.errors?.['minlength'] && name.touched">Minimum 5 caractères</div>
+      <div *ngIf="name.errors?.['pattern'] && name.touched">Lettres seulement</div>
+    </div>
+  
+    <!-- Image Field -->
+    <div>
+      <label for="image">Image URL:</label>
+      <input id="image" formControlName="image" type="text" /> <br />
+    </div>
+  
+    <!-- Category ID Field -->
+    <div>
+      <label for="categoryId">Category ID:</label>
+      <input id="categoryId" formControlName="categoryId" type="number" /> <br />
+      <div *ngIf="categoryId.errors?.['required'] && categoryId.touched">Category ID obligatoire</div>
+    </div>
+  
+    <!-- Description Field -->
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea> <br />
+    </div>
+  
+    <!-- Price Field -->
+    <div>
+      <label for="price">Price:</label>
+      <input type="text" id="price" formControlName="price" /> <br />
+      <div *ngIf="price.errors"> 
+      <div *ngIf="price.errors['required'] && price.touched">Price obligatoire</div>
+      <div *ngIf="price.errors['pattern'] && price.touched">Chiffres et points seulement</div></div>
+    </div>
+  
+    <!-- Brand Field -->
+    <div>
+      <label for="brand">Brand:</label>
+      <input id="brand" formControlName="brand" type="text" /> <br />
+    </div>
+  
+    <!-- Promotion Field -->
+    <div>
+      <label for="promotion">Promotion:</label>
+      <input id="promotion" formControlName="promotion" type="text" /> <br />
+      <div *ngIf="promotion.errors?.['pattern'] && promotion.touched">Doit être un nombre entre 0 et 100</div>
+    </div>
+  
+    <!-- Save Button -->
+    <button type="submit" [disabled]="myForm.invalid" >Save </button>
+  </form>
+  
