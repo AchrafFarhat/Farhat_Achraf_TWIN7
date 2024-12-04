@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +44,8 @@ import { ListProductsComponent } from './list-products/list-products.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule, //template driven form
-    ReactiveFormsModule //reactive form
+    ReactiveFormsModule, //reactive form
+    HttpClientModule
   ],
   providers: [], //services
   bootstrap: [AppComponent]
